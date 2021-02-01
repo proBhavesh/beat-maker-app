@@ -1,0 +1,132 @@
+/*Globally setting attributes*/
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+/*Making svg's pointer event to none*/
+i,
+svg {
+	pointer-events: none;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+/*Styling pads*/
+
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+	width: 5rem;
+	height: 5rem;
+	margin: 1rem 0.5rem;
+	cursor: pointer;
+}
+
+/*styling whole div contaning all elements*/
+
+.sequencer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 100vh;
+}
+
+/*giving backgrounds to the pads*/
+.kick-pad {
+	background: #72838e;
+}
+
+.snare-pad {
+	background: #87e287;
+}
+
+.hihat-pad {
+	background: #e5ef4c;
+}
+
+/*adding future class when pads will be clicked*/
+
+.kick-pad.active {
+	background: #7283f6;
+}
+
+.snare-pad.active {
+	background: #87e20a;
+}
+
+.hihat-pad.active {
+	background: #e5ef08;
+}
+
+/*making flexbox  for all pads*/
+.kick,
+.hihat,
+.snare {
+	display: flex;
+}
+.pad {
+	border-radius: 0.5rem;
+}
+
+/*styling all three sections */
+.kick-track,
+.hihat-track,
+.snare-track {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	margin-top: 5rem;
+}
+
+/*styling controls containg sound track+button*/
+.controls {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex: 1;
+	margin: 0rem 2rem;
+}
+
+/*styling buttons*/
+.controls button {
+	padding: 1rem;
+	border: none;
+	background-color: grey;
+	color: white;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+/*styling play button*/
+.play {
+	border: none;
+	padding: 1rem 2rem;
+	font-size: 1.5rem;
+	margin: 3rem;
+	background-color: grey;
+	color: white;
+	cursor: pointer;
+}
+
+select {
+	padding: 1rem;
+	font-size: 1rem;
+	/*border: none;*/
+}
+
+@keyframes playTrack {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.2);
+	}
+}
